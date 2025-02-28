@@ -1,10 +1,9 @@
 import React from 'react';
-import { Image, StyleSheet } from 'react-native';
+import { Image, StyleSheet, useWindowDimensions } from 'react-native';
 import { ThemedView } from './ThemedView';
 import { ThemedText } from './ThemedText';
 import { ExternalLink } from './ExternalLink';
 import { Platform } from 'react-native';
-import { Dimensions } from 'react-native';
 
 type ProjectCardProps = {
   title: string;
@@ -16,9 +15,8 @@ type ProjectCardProps = {
   gif?: string[];
 };
 
-const SCREEN_WIDTH = Dimensions.get('window').width;
-
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, repoLink, appStoreLink, description, techStack, images, gif }) => {
+  const { width } = useWindowDimensions();
   return (
     <ThemedView style={styles.projectCard}>
       <ThemedView style={styles.projectContent}>
@@ -53,7 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, repoLink, appStoreLink
               <ThemedView key={index} style={styles.deviceImagesContent}>
                 <Image 
                   source={{ uri }}
-                  style={styles.deviceImage}
+                  style={[styles.deviceImage, { height: width < 450 ? 400 : 600}]}
                 />
               </ThemedView>
             ))}
@@ -62,7 +60,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, repoLink, appStoreLink
               <ThemedView key={index} style={styles.deviceImagesContent}>
                 <Image 
                   source={{ uri }}
-                  style={styles.deviceGIF}
+                  style={[styles.deviceGIF, { height: width < 450 ? 400 : 600}]}
                 />
               </ThemedView>
             ))}
@@ -79,11 +77,6 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     shadowColor: '#000000',
     shadowRadius: 5,
-    // backgroundColor: Platform.select({
-    //   ios: '#00000008',
-    //   default: '#00000005',
-    // }),
-    // backgroundColor: "#ffffff",
     width: "90%",
   },
   projectContent: {
@@ -94,14 +87,15 @@ const styles = StyleSheet.create({
     marginVertical: 12,
     flexDirection:"row",
     flexWrap:"wrap",
-    // // alignItems: "center",
+    alignItems: "center",
+    justifyContent: "center",
   },
   deviceImagesContent: {
     gap: 12,
+    paddingVertical:10,
     paddingHorizontal: 4,
   },
   deviceImage: {
-    width: SCREEN_WIDTH * 0.9 < 300 ? "80%" : 300,
     aspectRatio: 1/2,
     borderRadius: 16,
     borderWidth: StyleSheet.hairlineWidth,
@@ -111,10 +105,8 @@ const styles = StyleSheet.create({
      }),
   },
   deviceGIF: {
-    width: SCREEN_WIDTH * 0.9 < 280 ? "80%" : 280,
     aspectRatio: 28/60,
     borderRadius: 16,
-    marginLeft: 10,
     borderWidth: StyleSheet.hairlineWidth,
     // borderColor: Platform.select({
     //   ios: '#00000015',
