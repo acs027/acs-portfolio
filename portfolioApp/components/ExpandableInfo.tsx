@@ -12,7 +12,7 @@ import { ThemedText } from './ThemedText';
 import { ThemedView } from './ThemedView';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
-const BUTTON_SIZE = 100;
+const BUTTON_SIZE = 80;
 const HORIZONTAL_PADDING = 25;
 
 interface Props {
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
     opacity: 0.6,
   },
   profileImage: {
-    width: 100,
-    height: 100,
+    width: BUTTON_SIZE,
+    height: BUTTON_SIZE,
   },
 }); 

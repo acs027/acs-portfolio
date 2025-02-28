@@ -4,6 +4,7 @@ import { ThemedView } from './ThemedView';
 import { ThemedText } from './ThemedText';
 import { ExternalLink } from './ExternalLink';
 import { Platform } from 'react-native';
+import { Dimensions } from 'react-native';
 
 type ProjectCardProps = {
   title: string;
@@ -14,6 +15,8 @@ type ProjectCardProps = {
   images?: string[];
   gif?: string[];
 };
+
+const SCREEN_WIDTH = Dimensions.get('window').width;
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, repoLink, appStoreLink, description, techStack, images, gif }) => {
   return (
@@ -98,8 +101,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 4,
   },
   deviceImage: {
-    width: 300,
-    height: 600,
+    width: SCREEN_WIDTH * 0.9 < 300 ? "80%" : 300,
+    aspectRatio: 1/2,
     borderRadius: 16,
     borderWidth: StyleSheet.hairlineWidth,
      borderColor: Platform.select({
@@ -108,9 +111,10 @@ const styles = StyleSheet.create({
      }),
   },
   deviceGIF: {
-    width: 280,
-    height: 600,
+    width: SCREEN_WIDTH * 0.9 < 280 ? "80%" : 280,
+    aspectRatio: 28/60,
     borderRadius: 16,
+    marginLeft: 10,
     borderWidth: StyleSheet.hairlineWidth,
     // borderColor: Platform.select({
     //   ios: '#00000015',

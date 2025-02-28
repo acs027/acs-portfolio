@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, useColorScheme } from 'react-native';
+import { Dimensions, StyleSheet, useColorScheme } from 'react-native';
 import { ThemedView } from './ThemedView';
 import { ThemedText } from './ThemedText';
 import { HelloWave } from './HelloWave';
@@ -50,8 +50,9 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.5,
         shadowRadius: 4,
         elevation: 2,
-        width: '50%',
         alignItems: "baseline",
+        minWidth: '90%',
+        maxWidth: 915,
       },
       darkRoundedRect: {
         // backgroundColor: '#f0f0f0',
@@ -63,8 +64,9 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.5,
         shadowRadius: 4,
         elevation: 2,
-        width: '50%',
         alignItems: "baseline",
+        width: 915,
+        maxWidth: '90%',
       },
       titleContainer: {
         // flexDirection: 'row',
