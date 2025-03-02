@@ -40,11 +40,11 @@ const Projects: React.FC = () => {
               repoLink="https://github.com/acs027/Gloomhaven-Attacker"
               appStoreLink="https://apps.apple.com/us/app/gloomhaven-attacker/id6447918398"
               description="Helper app for the Gloomhaven boardgame."
-            //   images={[
-            //     'https://github.com/user-attachments/assets/330470c6-957a-4d73-be7a-92dfb0eb524b',
-            //     'https://github.com/user-attachments/assets/f7a58bf1-d890-465a-a964-e441b3c2f0b8',
-            //     'https://github.com/user-attachments/assets/dce5ab5d-5524-45fb-a36d-1e06f1c3a837'
-            //   ]}
+               images={[
+                 'https://github.com/user-attachments/assets/c67a874e-7d69-4804-bd64-a9fba85ecad9',
+                 'https://github.com/user-attachments/assets/34b5cd55-1375-4b84-bc4a-8af482f8f5d7',
+                'https://github.com/user-attachments/assets/d7ff6980-c426-40f0-9d96-d5d193322a88'
+              ]}
             />
 
 

@@ -116,9 +116,9 @@ export function XCodeIcon(props: { size?: number }) {
     <LinearGradient id="xcode-original-K" gradientUnits="userSpaceOnUse" x1="36.124" y1="88.063" x2="42.599" y2="91.802"><Stop offset="0" stopColor="#8fc1f2"></Stop><Stop offset="1" stopColor="#3193ea"></Stop></LinearGradient>
     <Path d="M36.4 87.6l.2-.4s.2 2.1 2.6 3.4c2.2 1.2 3.9.3 3.9.3l-.3.4s-1.5 1.1-3.9-.3c-2.5-1.4-2.5-3.4-2.5-3.4z" fill="url(#xcode-original-K)"></Path>
     <LinearGradient id="xcode-original-L" gradientUnits="userSpaceOnUse" x1="76.722" y1="64.933" x2="89.179" y2="71.008"><Stop offset=".001"></Stop>
-    <Stop offset="1" Stop-opacity="0"></Stop></LinearGradient><Path d="M68.8 114.2l42.8-89.9-10.8-5.1-44.6 93.5s1.4.7 3.2 1.5h9.4z" fill="url(#xcode-original-L)"></Path>
+    <Stop offset="1" stopOpacity="0"></Stop></LinearGradient><Path d="M68.8 114.2l42.8-89.9-10.8-5.1-44.6 93.5s1.4.7 3.2 1.5h9.4z" fill="url(#xcode-original-L)"></Path>
     <radialGradient id="xcode-original-M" cx="95.237" cy="25.132" r="16.181" fx="79.585" fy="25.974" gradientTransform="matrix(-.4494 .8933 -1.5457 -.7777 176.886 -40.4)" gradientUnits="userSpaceOnUse">
-      <Stop offset="0"></Stop><Stop offset="1" Stop-opacity="0"></Stop></radialGradient><Path d="M94.1 13.8l20 9.5V52C107.2 48.7 61 26.7 61 26.7s3.2-6.7 6.2-12.9h26.9z" fill="url(#xcode-original-M)"></Path>
+      <Stop offset="0"></Stop><Stop offset="1" stopOpacity="0"></Stop></radialGradient><Path d="M94.1 13.8l20 9.5V52C107.2 48.7 61 26.7 61 26.7s3.2-6.7 6.2-12.9h26.9z" fill="url(#xcode-original-M)"></Path>
       <radialGradient id="xcode-original-N" cx="51.211" cy="114.953" r="7.901" fx="51.196" fy="117.292" gradientTransform="matrix(.8979 .4402 -.2506 .5111 34.032 33.662)" gradientUnits="userSpaceOnUse">
         <Stop offset=".417" stopColor="#0c0c12"></Stop><Stop offset="1" stopColor="#3d4651"></Stop></radialGradient><Path d="M44.5 110.2c-.3.6-.8 1.3-.7 2.4.1 4.1 6.8 7.9 10.7 7.9 2.7 0 3.6-1.1 4.6-3.1s-13.5-9.6-14.6-7.2z" fill="url(#xcode-original-N)"></Path>
         <LinearGradient id="xcode-original-O" gradientUnits="userSpaceOnUse" x1="84.758" y1="39.174" x2="94.522" y2="44.149"><Stop offset="0" stopColor="#344351"></Stop><Stop offset=".1" stopColor="#9697a0"></Stop><Stop offset=".181" stopColor="#8b8c95"></Stop>
@@ -131,14 +131,14 @@ export function XCodeIcon(props: { size?: number }) {
         <LinearGradient id="xcode-original-Q" gradientUnits="userSpaceOnUse" x1="98.542" y1="30.424" x2="114.815" y2="28.322"><Stop offset=".14" stopColor="#606e84"></Stop><Stop offset=".4" stopColor="#9899a5"></Stop>
         <Stop offset=".73" stopColor="#475768"></Stop><Stop offset=".92" stopColor="#262b33"></Stop></LinearGradient>
         <Path d="M99 32.2c.7-1.1 3.9-7.9 9-7.9 2.3 0 6.7 5.8 7.1 6.6.3.7-.7 3.5-1.2 2.2-.6-1.5-3.1-4.7-5.8-4.7s-6.4 3.1-7.3 4.2c-.9 1-2.5.7-1.8-.4z" fill="url(#xcode-original-Q)"></Path>
-        <LinearGradient id="xcode-original-R" gradientUnits="userSpaceOnUse" x1="106.128" y1="31.808" x2="104.549" y2="22.854"><Stop offset="0" stopColor="#101215" Stop-opacity=".1"></Stop>
-        <Stop offset=".46" stopColor="#101215" Stop-opacity=".7"></Stop><Stop offset=".7" stopColor="#474951"></Stop><Stop offset=".91" stopColor="#7b7d88"></Stop></LinearGradient>
+        <LinearGradient id="xcode-original-R" gradientUnits="userSpaceOnUse" x1="106.128" y1="31.808" x2="104.549" y2="22.854"><Stop offset="0" stopColor="#101215" stopOpacity=".1"></Stop>
+        <Stop offset=".46" stopColor="#101215" stopOpacity=".7"></Stop><Stop offset=".7" stopColor="#474951"></Stop><Stop offset=".91" stopColor="#7b7d88"></Stop></LinearGradient>
         <Path d="M98.8 31.8c.5-.8 2.8-4.3 3.9-5.4s3.9-4 6.3-4.4c2.4-.4 4.9 4.5 4.1 5.5-.6.7-1.6-.1-2.8-1.1-1.2-.9-2-2.7-5.8.2-1.3 1-2.6 1.8-5.6 6.1-.8 1.1-.6-.1-.1-.9z" fill="url(#xcode-original-R)"></Path>
         <LinearGradient id="xcode-original-S" gradientUnits="userSpaceOnUse" x1="58.131" y1="81.721" x2="73.237" y2="89.154"><Stop offset=".115" stopColor="#2c3952"></Stop><Stop offset=".374" stopColor="#3d414e"></Stop>
         <Stop offset=".55" stopColor="#474a54"></Stop><Stop offset=".754" stopColor="#4e5057"></Stop><Stop offset=".892" stopColor="#323945"></Stop><Stop offset="1" stopColor="#143052"></Stop></LinearGradient>
         <Path d="M86.4 61c.4-.8.9-2-.2-2.9-1.2-.9-6.8-3.9-7.8-4.1-1-.2-1.8 0-2.2.7-.4.7-31.1 53.3-31.7 54.8-.6 1.5-.7 2.6.2 2.9.9.3 11.2 5.2 12.2 6.3 1 1.1 1.5-.1 1.9-.7 1.9-2.4 27.1-56.2 27.6-57z" fill="url(#xcode-original-S)"></Path>
-        <LinearGradient id="xcode-original-T" gradientUnits="userSpaceOnUse" x1="81.508" y1="31.679" x2="93.19" y2="6.047"><Stop offset=".118" stopColor="#6d7078" Stop-opacity="0"></Stop>
-        <Stop offset=".2" stopColor="#6d7078" Stop-opacity=".7"></Stop><Stop offset=".34" stopColor="#35363a"></Stop><Stop offset=".374" stopColor="#1d1f22"></Stop><Stop offset=".4" stopColor="#101215"></Stop>
+        <LinearGradient id="xcode-original-T" gradientUnits="userSpaceOnUse" x1="81.508" y1="31.679" x2="93.19" y2="6.047"><Stop offset=".118" stopColor="#6d7078" stopOpacity="0"></Stop>
+        <Stop offset=".2" stopColor="#6d7078" stopOpacity=".7"></Stop><Stop offset=".34" stopColor="#35363a"></Stop><Stop offset=".374" stopColor="#1d1f22"></Stop><Stop offset=".4" stopColor="#101215"></Stop>
         <Stop offset=".5" stopColor="#16171a"></Stop><Stop offset=".56" stopColor="#292a2e"></Stop><Stop offset=".688" stopColor="#4b4d51"></Stop><Stop offset=".807" stopColor="#63666b"></Stop>
         <Stop offset=".915" stopColor="#72757b"></Stop><Stop offset="1" stopColor="#777a80"></Stop></LinearGradient>
         <Path d="M99.5 31.6c.5-.7 1.7-2.7 3.2-4.5 1-1.2 6.4-3.8 7.6-8 .7-2.3-.4-4.6-1.9-5.6-5.1-3.1-13.9-8-26.8-8-8.7 0-12.4 2.9-12.4 2.9h4.4l15.3 6 1.9 8s.2 2.7-.7 5.8c-.6 2.5-.8 4-1.7 6.5.7.3 2.3-.8 4.1-.3 1.6.4 2.6 2.6 3.7 1.3 1.9-2.5 2.5-3 3.3-4.1z" fill="url(#xcode-original-T)"></Path>
