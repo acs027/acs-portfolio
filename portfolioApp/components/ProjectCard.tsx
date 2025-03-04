@@ -77,7 +77,8 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     shadowColor: '#000000',
     shadowRadius: 5,
-    width: "90%",
+    width: 1000,
+    maxWidth: '95%',
   },
   projectContent: {
     gap: 8,

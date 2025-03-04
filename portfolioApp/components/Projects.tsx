@@ -76,7 +76,7 @@ const Projects: React.FC = () => {
 
 const styles = StyleSheet.create({
     sectionContainer: {
-        gap: 16,
+         gap: 12,
         marginBottom: 24,
         alignItems: 'center',
       },

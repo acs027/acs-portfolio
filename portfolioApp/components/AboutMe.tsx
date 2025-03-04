@@ -11,8 +11,11 @@ const AboutMe: React.FC = () => {
     <ThemedView style={styles.summaryContainer}>
     <ThemedView style={theme === 'dark' ? styles.darkRoundedRect : styles.lightRoundedRect}>
       <ThemedView style={styles.titleContainer}>
-      <HelloWave />
-        <ThemedText type="title">Hi I'm Ali Cihan</ThemedText>
+      
+        <ThemedText type="title">
+        Hi! <HelloWave /> 
+          </ThemedText>
+        <ThemedText type="title">I'm Ali Cihan</ThemedText>
         <ThemedText type="subtitle">iOS Developer</ThemedText>
 
       </ThemedView>
