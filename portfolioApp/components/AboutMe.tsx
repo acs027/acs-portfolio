@@ -54,8 +54,8 @@ const styles = StyleSheet.create({
         shadowRadius: 4,
         elevation: 2,
         alignItems: "baseline",
-        minWidth: '90%',
-        maxWidth: 915,
+        width: 1000,
+        maxWidth: '95%',
       },
       darkRoundedRect: {
         // backgroundColor: '#f0f0f0',
@@ -68,8 +68,8 @@ const styles = StyleSheet.create({
         shadowRadius: 4,
         elevation: 2,
         alignItems: "baseline",
-        width: 915,
-        maxWidth: '90%',
+        width: 1000,
+        maxWidth: '95%',
       },
       titleContainer: {
         // flexDirection: 'row',
