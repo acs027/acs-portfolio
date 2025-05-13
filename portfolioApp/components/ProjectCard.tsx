@@ -1,9 +1,11 @@
-import React from 'react';
-import { Image, StyleSheet, useWindowDimensions } from 'react-native';
-import { ThemedView } from './ThemedView';
-import { ThemedText } from './ThemedText';
-import { ExternalLink } from './ExternalLink';
-import { Platform } from 'react-native';
+import React from "react";
+import { Image, StyleSheet, useWindowDimensions, View } from "react-native";
+import { ThemedView } from "./ThemedView";
+import { ThemedText } from "./ThemedText";
+import { ExternalLink } from "./ExternalLink";
+import { Platform } from "react-native";
+import { GithubIcon } from "./icons/social/GithubIcon";
+import { AppStoreDownloadSVG } from "./icons/social/AppStoreDownload";
 
 type ProjectCardProps = {
   title: string;
@@ -15,55 +17,84 @@ type ProjectCardProps = {
   gif?: string[];
 };
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, repoLink, appStoreLink, description, techStack, images, gif }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  title,
+  repoLink,
+  appStoreLink,
+  description,
+  techStack,
+  images,
+  gif,
+}) => {
   const { width } = useWindowDimensions();
   return (
     <ThemedView style={styles.projectCard}>
       <ThemedView style={styles.projectContent}>
         <ThemedView>
-          <ThemedText type="title">{title}</ThemedText>
-          <ExternalLink href={repoLink}>
-            <ThemedText type="link">View in GitHub</ThemedText>
-          </ExternalLink>
-          {
-          appStoreLink &&
-          <ExternalLink href={appStoreLink}>
-            <ThemedText type="link">View in AppStore</ThemedText>
-          </ExternalLink>
-          }
+          <ThemedView
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-between",
+              padding: 10,
+            }}
+          >
+            <ThemedText type="title">{title}</ThemedText>
+
+            <View style={{ flexDirection: "row", gap: 10 }}>
+              {appStoreLink && (
+                <ExternalLink href={appStoreLink}>
+                  <AppStoreDownloadSVG size={50} />
+                </ExternalLink>
+              )}
+              {repoLink && (
+                <ExternalLink href={repoLink}>
+                  <GithubIcon size={50} effectValue={1} />
+                </ExternalLink>
+              )}
+            </View>
+          </ThemedView>
         </ThemedView>
 
         <ThemedText>{description}</ThemedText>
 
-          {
-            techStack &&
-            <ThemedView>
+        {techStack && (
+          <ThemedView>
             <ThemedText type="defaultSemiBold">Tech Used</ThemedText>
-            <ThemedText>{techStack.join(' ')}</ThemedText>
+            <ThemedText>{techStack.join(" ")}</ThemedText>
           </ThemedView>
-          }
-        
+        )}
 
         <ThemedView style={styles.projectImageContainer}>
           <ThemedView style={styles.deviceImagesContainer}>
             {images &&
-            images.map((uri, index) => (
-              <ThemedView key={index} style={styles.deviceImagesContent}>
-                <Image 
-                  source={{ uri }}
-                  style={[styles.deviceImage, { height: width < 450 ? 400 : 600}]}
-                />
-              </ThemedView>
-            ))}
+              images.map((uri, index) => (
+                <ThemedView key={index} style={styles.deviceImagesContent}>
+                  <Image
+                    source={{ uri }}
+                    style={[
+                      styles.deviceImage,
+                      { height: width < 450 ? 400 : 600 },
+                    ]}
+                  />
+                </ThemedView>
+              ))}
             {gif &&
-            gif.map((uri, index) => (
-              <ThemedView key={index} style={styles.deviceImagesContent}>
-                <Image 
-                  source={{ uri }}
-                  style={[styles.deviceGIF, { height: width < 450 ? 400 : 600}]}
-                />
-              </ThemedView>
-            ))}
+              gif.map((src, index) => (
+                <ThemedView key={index} style={styles.deviceImagesContent}>
+                  <Image
+                    source={typeof src === "string" ? { uri: src } : src}
+                    style={[
+                      styles.deviceGIF,
+                      {
+                        height: width < 450 ? 400 : 600,
+                        width:
+                          width < 450 ? (400 * 9) / 19.5 : (600 * 9) / 19.5,
+                      },
+                    ]}
+                  />
+                </ThemedView>
+              ))}
           </ThemedView>
         </ThemedView>
       </ThemedView>
@@ -75,10 +106,10 @@ const styles = StyleSheet.create({
   projectCard: {
     padding: 16,
     borderRadius: 12,
-    shadowColor: '#000000',
+    shadowColor: "#000000",
     shadowRadius: 5,
     width: 1000,
-    maxWidth: '95%',
+    maxWidth: "95%",
   },
   projectContent: {
     gap: 8,
@@ -86,27 +117,28 @@ const styles = StyleSheet.create({
   },
   deviceImagesContainer: {
     marginVertical: 12,
-    flexDirection:"row",
-    flexWrap:"wrap",
+    flexDirection: "row",
+    flexWrap: "wrap",
     alignItems: "center",
     justifyContent: "center",
   },
   deviceImagesContent: {
     gap: 12,
-    paddingVertical:10,
+    paddingVertical: 10,
     paddingHorizontal: 4,
   },
   deviceImage: {
-    aspectRatio: 1/2,
+    aspectRatio: 1 / 2,
     borderRadius: 16,
     borderWidth: StyleSheet.hairlineWidth,
-     borderColor: Platform.select({
-       ios: '#00000015',
-       default: '#00000010',
-     }),
+    borderColor: Platform.select({
+      ios: "#00000015",
+      default: "#00000010",
+    }),
   },
   deviceGIF: {
-    aspectRatio: 28/60,
+    resizeMode: "cover",
+    aspectRatio: 9 / 19.5,
     borderRadius: 16,
     borderWidth: StyleSheet.hairlineWidth,
     // borderColor: Platform.select({
@@ -117,7 +149,7 @@ const styles = StyleSheet.create({
 
   projectImageContainer: {
     alignItems: "center",
-  }
-}); 
+  },
+});
 
 export default ProjectCard;
