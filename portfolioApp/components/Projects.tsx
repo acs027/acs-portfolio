@@ -3,6 +3,7 @@ import { StyleSheet } from "react-native";
 import { ThemedView } from "./ThemedView";
 import ProjectCard from "./ProjectCard";
 import { ThemedText } from "./ThemedText";
+import { flighImg1 } from "../assets/images/flightcomputer01.png";
 
 const Projects: React.FC = () => {
   return (
@@ -16,8 +17,8 @@ const Projects: React.FC = () => {
         description="E6B Flight Pro is a precise digital replica of the classic E6B flight computer, built for pilots, student aviators, and aviation enthusiasts."
         techStack={["• SwiftUI", "• MVVM Architecture"]}
         images={[
-          "https://github.com/user-attachments/assets/62c800cf-64de-4aa9-9c6e-e13dc93d3193",
-          "https://github.com/user-attachments/assets/ad8edb58-2368-4841-8ae5-c01a0f5227c1",
+          require("../assets/images/flightcomputer01.png"),
+          require("../assets/images/flightcomputer02.png"),
         ]}
         gif={[require("../assets/gifs/flightcomputergif.gif")]}
       />

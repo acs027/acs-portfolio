@@ -68,17 +68,26 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <ThemedView style={styles.projectImageContainer}>
           <ThemedView style={styles.deviceImagesContainer}>
             {images &&
-              images.map((uri, index) => (
-                <ThemedView key={index} style={styles.deviceImagesContent}>
-                  <Image
-                    source={{ uri }}
-                    style={[
-                      styles.deviceImage,
-                      { height: width < 450 ? 400 : 600 },
-                    ]}
-                  />
-                </ThemedView>
-              ))}
+              images.map((img, index) => {
+                const isWebUri = typeof img === "string";
+                const source = isWebUri ? { uri: img } : img; // img is already a require(...) object
+
+                return (
+                  <ThemedView key={index} style={styles.deviceImagesContent}>
+                    <Image
+                      source={source}
+                      style={[
+                        styles.deviceImage,
+                        {
+                          height: width < 450 ? 400 : 600,
+                          width:
+                            width < 450 ? (400 * 9) / 19.5 : (600 * 9) / 19.5,
+                        },
+                      ]}
+                    />
+                  </ThemedView>
+                );
+              })}
             {gif &&
               gif.map((src, index) => (
                 <ThemedView key={index} style={styles.deviceImagesContent}>
